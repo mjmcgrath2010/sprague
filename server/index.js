@@ -1,39 +1,52 @@
 require('dotenv').config()
 
 const express = require('express')
-const app = express()
-
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const webpack = require('webpack');
+const webpack = require('webpack')
 
-const webpackConfig = require('../config/webpack/index');
-
+const webpackConfig = require('../config/webpack/index')
 const apiRoutes = require('./api/routes/index')
 
-const webpackCompiler = webpack(webpackConfig);
+const app = express()
+const webpackCompiler = webpack(webpackConfig)
 
-app.use(
-	require('webpack-dev-middleware')(webpackCompiler, {
-		noInfo: true,
-		publicPath: webpackConfig.output.publicPath,
-	}),
-);
-app.use(
-	require('webpack-hot-middleware')(webpackCompiler, {
-		path: '/__webpack_hmr',
-	}),
-);
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    // Apply React HMR
+    if (process.env.NODE_ENV !== 'production') {
+      app.use(
+        require('webpack-dev-middleware')(webpackCompiler, {
+          noInfo: true,
+          publicPath: webpackConfig.output.publicPath,
+        })
+      )
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+      app.use(
+        require('webpack-hot-middleware')(webpackCompiler, {
+          path: '/__webpack_hmr',
+        })
+      )
+    }
 
-// parse application/json
-app.use(bodyParser.json())
+    // parse application/x-www-form-urlencoded
+    app.use(bodyParser.urlencoded({ extended: false }))
+    app.use(bodyParser.json())
+    // api routes
+    app.use('/api', apiRoutes)
+    // Handle react requests
+    app.use(express.static('public'))
 
-app.use('/api', apiRoutes)
-
-app.use(express.static('public'))
-
-app.listen(process.env.PORT, () => {
-	console.log(`Example app listening at http://localhost:${process.env.PORT}`)
-})
+    app.listen(process.env.PORT, () => {
+      console.log(`Example app listening at http://localhost:${process.env.PORT}`)
+    })
+  })
+  .catch(e => {
+    console.log(e)
+    app.use(express.static('public/error'))
+  })

@@ -5,14 +5,18 @@
   "main": "server/index.js",
   "scripts": {
     "test": "yarn jest",
-    "dev": "yarn webpack && nodemon server/index.js",
-    "webpack": "webpack --config ./config/webpack/index.js",
-    "start": "webpack && node server/index.js"
+    "dev": "yarn build && nodemon server/index.js",
+    "build": "webpack --config ./config/webpack/index.js",
+    "start": "node server/index.js"
   },
   "author": "Mike McGrath",
   "license": "ISC",
+  "prettier": "mmcgrath-prettier-config",
   "nodemonConfig": {
-    "ignore": ["client/*", "public/*"]
+    "ignore": [
+      "client/*",
+      "public/*"
+    ]
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -34,6 +38,8 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "mmcgrath-prettier-config": "^1.0.0",
+    "prettier": "^2.1.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
