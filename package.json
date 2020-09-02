@@ -12,7 +12,7 @@
   "author": "Mike McGrath",
   "license": "ISC",
   "nodemonConfig": {
-    "ignore": ["src/*", "public/*"]
+    "ignore": ["client/*", "public/*"]
   },
   "dependencies": {
     "bcrypt": "^5.0.0",

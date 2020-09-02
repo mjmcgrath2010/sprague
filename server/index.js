@@ -11,6 +11,7 @@ const webpackConfig = require('../config/webpack/index');
 const apiRoutes = require('./api/routes/index')
 
 const webpackCompiler = webpack(webpackConfig);
+
 app.use(
 	require('webpack-dev-middleware')(webpackCompiler, {
 		noInfo: true,

@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "aca709c944113c9284cb";
+/******/ 	var hotCurrentHash = "11b53e454581249add2a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -859,6 +859,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/index.js":
+/*!*************************!*\
+  !*** ./client/index.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar title = 'Express backend with HMR!';\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, title), document.getElementById('app'));\n\n//# sourceURL=webpack:///./client/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/ansi-html/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/ansi-html/index.js ***!
@@ -1155,26 +1167,14 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar title = 'Mike was';\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, title), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
 /***/ 0:
-/*!******************************************************************************************!*\
-  !*** multi ./src/index.js webpack-hot-middleware/client?path=/__webpack_hmr&reload=true ***!
-  \******************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** multi ./client/index.js webpack-hot-middleware/client?path=/__webpack_hmr&reload=true ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/mmcgrath/Development/promptli-api/src/index.js */\"./src/index.js\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&reload=true */\"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&reload=true\");\n\n\n//# sourceURL=webpack:///multi_./src/index.js_webpack-hot-middleware/client?");
+eval("__webpack_require__(/*! /Users/mmcgrath/Development/promptli-api/client/index.js */\"./client/index.js\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&reload=true */\"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&reload=true\");\n\n\n//# sourceURL=webpack:///multi_./client/index.js_webpack-hot-middleware/client?");
 
 /***/ })
 

@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require('webpack');
-const APP_DIR = path.join(__dirname, "/../../src")
+const APP_DIR = path.join(__dirname, "/../../client")
 
 
 module.exports = {
