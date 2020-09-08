@@ -1,28 +1,44 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import styled, { ThemeProvider } from 'styled-components'
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import muiTheme from '../styles/muiTheme'
+import styledTheme from '../styles/styledTheme'
+
 import Home from './Home'
+
+const Button = styled.button`
+  border-color: ${({ theme }) => theme.success};
+  color: ${({ theme }) => theme.success};
+  background: #fff;
+  padding: 2em;
+`
 
 const App = () => {
   return (
-    <Fragment>
-      <CssBaseline />
-      <Router>
-        <Switch>
-          <Route path="/about">
-            <h1>About</h1>
-          </Route>
+    <MuiThemeProvider theme={muiTheme}>
+      <ThemeProvider theme={styledTheme}>
+        <CssBaseline />
+        <Router>
+          <Switch>
+            <Route path="/about">
+              <h1>About</h1>
+              <Button>Click Me</Button>
+            </Route>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route>
-            <h1>404</h1>
-          </Route>
-        </Switch>
-      </Router>
-    </Fragment>
+            <Route>
+              <h1>404</h1>
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
+    </MuiThemeProvider>
   )
 }
 

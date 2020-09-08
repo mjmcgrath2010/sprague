@@ -5,7 +5,7 @@ import GridItem from '../../components/ui/layout/GridItem'
 
 const Home = props => {
   return (
-    <Container fluid>
+    <Container>
       <GridContainer>
         <GridItem colWidth={6}>
           <h1>Home</h1>
