@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const title = 'Express backend with HMR';
+import App from './containers/App'
 
-ReactDOM.render(
-<div>{title}</div>,
-document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'))
