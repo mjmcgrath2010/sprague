@@ -12,6 +12,10 @@ const App = () => {
         <Route exact path="/">
           <h1>Home</h1>
         </Route>
+
+        <Route>
+          <h1>404</h1>
+        </Route>
       </Switch>
     </Router>
   )
