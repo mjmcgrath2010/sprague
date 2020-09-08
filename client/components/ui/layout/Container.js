@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
 
 const Container = ({ fluid, fixed, children, ...rest }) => {
   return (
-    <MUIContainer disableGutters={fluid} fixed={fixed} maxWidth="xl" classes={useStyles} {...rest}>
+    <MUIContainer disableGutters={fluid} fixed={fixed} maxWidth="xl" classes={useStyles()} {...rest}>
       {children}
     </MUIContainer>
   )

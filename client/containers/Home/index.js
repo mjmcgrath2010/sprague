@@ -1,10 +1,23 @@
 import React from 'react'
+import Container from '../../components/ui/layout/Container'
+import GridContainer from '../../components/ui/layout/GridContainer'
+import GridItem from '../../components/ui/layout/GridItem'
 
 const Home = props => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Container fluid>
+      <GridContainer>
+        <GridItem>
+          <h1>Home</h1>
+        </GridItem>
+        <GridItem>
+          <h1>Home</h1>
+        </GridItem>
+        <GridItem>
+          <h1>Home</h1>
+        </GridItem>
+      </GridContainer>
+    </Container>
   )
 }
 
