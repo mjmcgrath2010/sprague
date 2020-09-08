@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const webpack = require('webpack')
+const path = require('path')
 
 const webpackConfig = require('../config/webpack/index')
 const apiRoutes = require('./api/routes/index')
@@ -40,7 +41,21 @@ mongoose
     // api routes
     app.use('/api', apiRoutes)
     // Handle react requests
-    app.use(express.static('public'))
+    app.use('/*', (req, res, next) => {
+      const options = {
+        root: path.join(__dirname + '/../public'),
+        dotfiles: 'deny',
+        headers: {
+          'x-timestamp': Date.now(),
+          'x-sent': true,
+        },
+      }
+      res.sendFile('index.html', options, function(err) {
+        if (err) {
+          next(err)
+        }
+      })
+    })
 
     app.listen(process.env.PORT, () => {
       console.log(`Example app listening at http://localhost:${process.env.PORT}`)
