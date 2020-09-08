@@ -7,10 +7,10 @@ const Home = props => {
   return (
     <Container fluid>
       <GridContainer>
-        <GridItem>
+        <GridItem colWidth={6}>
           <h1>Home</h1>
         </GridItem>
-        <GridItem>
+        <GridItem colWidth={6}>
           <h1>Home</h1>
         </GridItem>
         <GridItem>
