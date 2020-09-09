@@ -1,5 +1,6 @@
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const APP_DIR = path.join(__dirname, '/../../client')
 
@@ -8,6 +9,10 @@ module.exports = {
     app: path.join(APP_DIR, 'index.js'),
   },
   mode: 'production',
+  output: {
+    path: path.join(__dirname, '/../../public'),
+    filename: 'assets/[name].bundle.js',
+  },
   optimization: {
     minimize: true,
     minimizer: [
@@ -16,5 +21,5 @@ module.exports = {
       }),
     ],
   },
-  plugins: [],
+  plugins: [new CleanWebpackPlugin()],
 }

@@ -1,7 +1,9 @@
 {
-  "name": "promptli-api",
+  "name": "react-express-mongo",
   "version": "1.0.0",
-  "description": "",
+  "author": "Mike McGrath",
+  "license": "ISC",
+  "description": "A boilerplate for building a future company",
   "main": "server/index.js",
   "scripts": {
     "test": "jest",
@@ -9,8 +11,6 @@
     "build": "webpack --config ./config/webpack/index.js",
     "start": "node server/index.js"
   },
-  "author": "Mike McGrath",
-  "license": "ISC",
   "prettier": "mmcgrath-prettier-config",
   "nodemonConfig": {
     "ignore": [

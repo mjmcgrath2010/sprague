@@ -24,7 +24,7 @@ const App = () => {
         <Router>
           <Switch>
             <Route path="/about">
-              <h1>About</h1>
+              <h1>Hello</h1>
               <Button>Click Me</Button>
             </Route>
 
