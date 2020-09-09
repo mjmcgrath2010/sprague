@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const env = process.env.NODE_ENV
 const common = require('./common')
+const server = require('./server')
 
 let config
 let envConfig
@@ -27,4 +28,4 @@ config = {
   plugins: [...common.plugins, ...envConfig.plugins],
 }
 
-module.exports = config
+module.exports = [config,server]

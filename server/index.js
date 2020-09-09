@@ -43,19 +43,19 @@ mongoose
     // Handle react requests
 
     // Static built assets
-    app.use('/assets', express.static('public/assets'))
+    app.use('/assets', express.static('build/assets'))
 
     // Handle All React Requests
     app.use('/*', (req, res, next) => {
       const options = {
-        root: path.join(__dirname + '/../public'),
         dotfiles: 'deny',
         headers: {
           'x-timestamp': Date.now(),
           'x-sent': true,
         },
       }
-      res.sendFile('index.html', options, function(err) {
+
+      res.sendFile(path.resolve('build', 'index.html'), options, function(err) {
         if (err) {
           next(err)
         }

@@ -7,9 +7,9 @@
   "main": "server/index.js",
   "scripts": {
     "test": "jest",
-    "dev": "yarn build && nodemon server/index.js",
+    "dev": "yarn build && nodemon build/server/index.js",
     "build": "webpack --config ./config/webpack/index.js",
-    "start": "node server/index.js"
+    "start": "node build/server/index.js"
   },
   "prettier": "mmcgrath-prettier-config",
   "nodemonConfig": {
@@ -67,6 +67,7 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
