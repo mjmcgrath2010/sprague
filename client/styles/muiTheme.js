@@ -1,46 +1,47 @@
 import { createMuiTheme } from '@material-ui/core/styles'
+import theme from './styledTheme'
 
 const muiTheme = createMuiTheme({
   palette: {
     primary: {
-      light: '#534bae',
-      main: '#1a237e',
-      dark: '#000051',
-      contrastText: '#FFF',
+      light: theme.primaryLight,
+      main: theme.primary,
+      dark: theme.primaryDark,
+      contrastText: theme.white,
     },
     secondary: {
-      light: '#80e8dd',
-      main: '#4bb5ab',
-      dark: '#00857c',
-      contrastText: '#FFF',
+      light: theme.secondaryLight,
+      main: theme.secondary,
+      dark: theme.secondaryDark,
+      contrastText: theme.white,
     },
     error: {
-      light: '#ff616f',
-      main: '#ff1744',
-      dark: '#c4001d',
-      contrastText: '#FFF',
+      light: theme.errorLight,
+      main: theme.error,
+      dark: theme.errorDark,
+      contrastText: theme.white,
     },
     warning: {
-      light: '#ffff72',
-      main: '#ffeb3b',
-      dark: '#c8b900',
-      contrastText: '#000',
+      light: theme.warningLight,
+      main: theme.warning,
+      dark: theme.warningDark,
+      contrastText: theme.black,
     },
     info: {
-      light: '#5e92f3',
-      main: '#1565c0',
-      dark: '#003c8f',
-      contrastText: '#FFF',
+      light: theme.infoLight,
+      main: theme.info,
+      dark: theme.infoDark,
+      contrastText: theme.white,
     },
     success: {
-      light: '#80e27e',
-      main: '#4caf50',
-      dark: '#087f23',
-      contrastText: '#FFF',
+      light: theme.successLight,
+      main: theme.success,
+      dark: theme.successDark,
+      contrastText: theme.white,
     },
   },
   typography: {
-    fontFamily: ['Raleway', 'sans-serif'].join(','),
+    fontFamily: [theme.primaryFont, 'sans-serif'].join(','),
   },
   overrides: {
     MuiCssBaseline: {
