@@ -9,10 +9,7 @@ module.exports = {
     app: path.join(APP_DIR, 'index.js'),
   },
   mode: 'production',
-  output: {
-    path: path.join(__dirname, '/../../public'),
-    filename: 'assets/[name].bundle.js',
-  },
+  output: {},
   optimization: {
     minimize: true,
     minimizer: [

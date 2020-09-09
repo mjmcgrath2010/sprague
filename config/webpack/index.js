@@ -13,6 +13,18 @@ try {
   envConfig = require('./production')
 }
 
-config = { ...common, ...envConfig, plugins: [...common.plugins, ...envConfig.plugins] }
+config = {
+  ...common,
+  ...envConfig,
+  entry: {
+    ...common.entry,
+    ...envConfig.entry,
+  },
+  output: {
+    ...common.output,
+    ...envConfig.output,
+  },
+  plugins: [...common.plugins, ...envConfig.plugins],
+}
 
 module.exports = config

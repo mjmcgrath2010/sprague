@@ -9,8 +9,6 @@ module.exports = {
   mode: 'development',
   plugins: [new webpack.HotModuleReplacementPlugin()],
   output: {
-    path: path.join(__dirname, '/../../public'),
-    filename: 'assets/[name].bundle.js',
     hotUpdateChunkFilename: '.hot/hot-update.js',
     hotUpdateMainFilename: '.hot/hot-update.json',
   },

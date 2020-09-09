@@ -3,6 +3,12 @@ const APP_DIR = path.join(__dirname, '/../../client')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  entry: {},
+  output: {
+    path: path.join(__dirname, '/../../build'),
+    filename: 'assets/[name].js',
+  },
+  target: 'web',
   module: {
     rules: [
       {
@@ -19,7 +25,6 @@ module.exports = {
       },
     ],
   },
-  target: 'web',
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
