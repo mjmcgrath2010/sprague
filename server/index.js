@@ -41,6 +41,11 @@ mongoose
     // api routes
     app.use('/api', apiRoutes)
     // Handle react requests
+
+    // Static built assets
+    app.use('/assets', express.static('public/assets'))
+
+    // Handle All React Requests
     app.use('/*', (req, res, next) => {
       const options = {
         root: path.join(__dirname + '/../public'),

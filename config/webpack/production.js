@@ -8,7 +8,6 @@ module.exports = {
     app: path.join(APP_DIR, 'index.js'),
   },
   mode: 'production',
-  devtool: 'source-map',
   optimization: {
     minimize: true,
     minimizer: [

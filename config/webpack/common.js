@@ -1,6 +1,7 @@
 const path = require('path')
 const APP_DIR = path.join(__dirname, '/../../client')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   module: {
@@ -25,12 +26,12 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/../../public'),
-    filename: '[name].bundle.js',
-    publicPath: '/',
+    filename: 'assets/[name].bundle.js',
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      template: path.join(__dirname, '/../../public/index.html'),
+      template: path.join(APP_DIR, 'index.html'),
     }),
   ],
 }

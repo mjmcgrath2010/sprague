@@ -11,7 +11,7 @@ const Home = props => {
           <h1>Home</h1>
         </GridItem>
         <GridItem colWidth={6}>
-          <h1>Home</h1>
+          <h1>Home Mike</h1>
         </GridItem>
         <GridItem>
           <h1>Home</h1>
