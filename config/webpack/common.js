@@ -1,8 +1,6 @@
 const path = require('path')
 const APP_DIR = path.resolve('client')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
 
 module.exports = {
   entry: {},
@@ -32,9 +30,6 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [],
-    }),
     new HtmlWebPackPlugin({
       template: path.resolve('client', 'index.html'),
     }),
