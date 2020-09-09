@@ -16,6 +16,4 @@ try {
 
 config = _.merge(common, envConfig)
 
-console.log(config)
-
 module.exports = config
