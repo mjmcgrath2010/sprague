@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Home from '../../../../client/containers/Home'
+import Login from '../../../../client/containers/Login'
 
-describe('<Home />', () => {
-  const wrapper = shallow(<Home />)
+describe('<Login />', () => {
+  const wrapper = shallow(<Login />)
   it('renders', () => {
     expect(wrapper.find('Container').exists()).toBe(true)
   })

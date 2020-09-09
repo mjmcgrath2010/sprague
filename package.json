@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "test": "yarn jest",
+    "test": "jest",
     "dev": "yarn build && nodemon server/index.js",
     "build": "webpack --config ./config/webpack/index.js",
     "start": "node server/index.js"
@@ -17,6 +17,9 @@
       "client/*",
       "public/*"
     ]
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/test/config/setupTests.js"]
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -45,7 +48,12 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^11.0.2",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "jest": "^26.4.2",
     "mmcgrath-prettier-config": "^1.0.0",
     "prettier": "^2.1.1",
     "webpack-cli": "^3.3.12",
