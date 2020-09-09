@@ -46,7 +46,8 @@
     "redux": "^4.0.5",
     "styled-components": "^5.2.0",
     "terser-webpack-plugin": "^4.1.0",
-    "webpack": "^4.44.1"
+    "webpack": "^4.44.1",
+    "webpack-node-externals": "^2.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
@@ -67,7 +68,6 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
-    "webpack-hot-middleware": "^2.25.0",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
