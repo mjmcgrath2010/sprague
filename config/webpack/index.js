@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-const _ = require('lodash')
 const env = process.env.NODE_ENV
 const common = require('./common')
 
@@ -14,6 +13,6 @@ try {
   envConfig = require('./production')
 }
 
-config = _.merge(common, envConfig)
+config = { ...common, ...envConfig, plugins: [...envConfig.plugins, ...common.plugins] }
 
 module.exports = config
