@@ -28,4 +28,4 @@ config = {
   plugins: [...common.plugins, ...envConfig.plugins],
 }
 
-module.exports = [config,server]
+module.exports = [config, server]

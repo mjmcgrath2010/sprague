@@ -18,5 +18,9 @@ module.exports = {
       }),
     ],
   },
-  plugins: [new CleanWebpackPlugin()],
+  plugins: [
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [],
+    }),
+  ],
 }
