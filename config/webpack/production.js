@@ -1,12 +1,9 @@
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
-const APP_DIR = path.join(__dirname, '/../../client')
 
 module.exports = {
   entry: {
-    app: path.join(APP_DIR, 'index.js'),
+    app: path.resolve('client', 'index.js'),
   },
   output: {},
   optimization: {
@@ -17,9 +14,5 @@ module.exports = {
       }),
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [],
-    }),
-  ],
+  plugins: [],
 }
