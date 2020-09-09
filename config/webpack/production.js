@@ -8,7 +8,6 @@ module.exports = {
   entry: {
     app: path.join(APP_DIR, 'index.js'),
   },
-  mode: 'production',
   output: {},
   optimization: {
     minimize: true,

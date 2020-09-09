@@ -15,7 +15,7 @@
   "nodemonConfig": {
     "ignore": [
       "client/*",
-      "public/*"
+      "build/*"
     ]
   },
   "jest": {

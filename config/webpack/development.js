@@ -1,12 +1,10 @@
 const path = require('path')
 const webpack = require('webpack')
-const APP_DIR = path.join(__dirname, '/../../client')
 
 module.exports = {
   entry: {
-    app: [path.join(APP_DIR, 'index.js'), 'webpack-hot-middleware/client?path=/__webpack_hmr&reload=true'],
+    app: [path.resolve('client', 'index.js'), 'webpack-hot-middleware/client?path=/__webpack_hmr&reload=true'],
   },
-  mode: 'development',
   plugins: [new webpack.HotModuleReplacementPlugin()],
   output: {
     hotUpdateChunkFilename: '.hot/hot-update.js',

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const webpack = require('webpack')
 const path = require('path')
 
-const webpackConfig = require('../config/webpack/index')
+const [webpackConfig] = require('../config/webpack/index')
 const apiRoutes = require('./api/routes/index')
 
 const app = express()

@@ -1,12 +1,13 @@
 const path = require('path')
-const APP_DIR = path.join(__dirname, '/../../client')
+const APP_DIR = path.resolve('client')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {},
   output: {
-    path: path.join(__dirname, '/../../build'),
+    path: path.resolve('build'),
     filename: 'assets/[name].js',
+    publicPath: '/',
   },
   target: 'web',
   module: {
@@ -30,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.join(APP_DIR, 'index.html'),
+      template: path.resolve('client', 'index.html'),
     }),
   ],
 }

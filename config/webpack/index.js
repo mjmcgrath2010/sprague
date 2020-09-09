@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const env = process.env.NODE_ENV
+const mode = process.env.NODE_ENV || 'production'
 const common = require('./common')
 const server = require('./server')
 
@@ -8,15 +8,16 @@ let config
 let envConfig
 
 try {
-  envConfig = require(`./${env}`)
+  envConfig = require(`./${mode}`)
 } catch (e) {
-  console.log(`Error loading webpack config for env: ${env}`, e)
+  console.log(`Error loading webpack config for env: ${mode}`, e)
   envConfig = require('./production')
 }
 
 config = {
   ...common,
   ...envConfig,
+  mode,
   entry: {
     ...common.entry,
     ...envConfig.entry,

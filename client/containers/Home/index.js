@@ -8,7 +8,7 @@ const Home = props => {
     <Container>
       <GridContainer>
         <GridItem colWidth={6}>
-          <h1>Home</h1>
+          <h1>Home Mike</h1>
         </GridItem>
         <GridItem colWidth={6}>
           <h1>Home Mike</h1>
