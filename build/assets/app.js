@@ -3112,7 +3112,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/mmcgrath/Development/promptli-api/client/index.js */\"./client/index.js\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&reload=true */\"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&reload=true\");\n\n\n//# sourceURL=webpack:///multi_./client/index.js_webpack-hot-middleware/client?");
+eval("__webpack_require__(/*! /Users/mmcgrath/Development/sprague/client/index.js */\"./client/index.js\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&reload=true */\"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&reload=true\");\n\n\n//# sourceURL=webpack:///multi_./client/index.js_webpack-hot-middleware/client?");
 
 /***/ })
 

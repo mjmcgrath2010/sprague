@@ -11,7 +11,7 @@ const GridItem = ({ children, colSm, colMd, colLg, colXL, colWidth }) => {
 }
 
 GridItem.defaultProps = {
-  colSm: false,
+  colSm: 12,
   colMd: false,
   colLg: false,
   colXL: false,
