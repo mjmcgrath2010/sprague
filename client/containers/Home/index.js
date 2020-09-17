@@ -1,6 +1,4 @@
 import React from 'react'
-import GridContainer from '../../components/ui/layout/GridContainer'
-import GridItem from '../../components/ui/layout/GridItem'
 import HomePage from '../../layouts/public/HomeLayout'
 
 const Home = props => {
@@ -9,15 +7,9 @@ const Home = props => {
       <HomePage.Hero>
         <h1>Mike</h1>
       </HomePage.Hero>
-      <GridItem colWidth={6}>
-        <h1>Home Mike</h1>
-      </GridItem>
-      <GridItem colWidth={6}>
-        <h1>Home Mike</h1>
-      </GridItem>
-      <GridItem>
-        <h1>Home</h1>
-      </GridItem>
+      <HomePage.Featured>
+        <h1>Featured</h1>
+      </HomePage.Featured>
     </HomePage>
   )
 }
