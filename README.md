@@ -1,10 +1,17 @@
+<style>
+img.vendor-logo {
+    height: 40px;
+    width: auto;
+    display: none;
+}
+</style>
 # Sprague - the full stack javascript application boilerplate
 Author: Mike McGrath
 
 ## Tech Stack
 
 ### Client
-  - [React.js](https://reactjs.org) <img style=" width: 40px; height: 40px;" src="https://raw.githubusercontent.com/mjmcgrath2010/sprague/master/assets/logos/vendors/react-logo.svg">
+  - [React.js](https://reactjs.org) <img class="vendor-logo" src="https://raw.githubusercontent.com/mjmcgrath2010/sprague/master/assets/logos/vendors/react-logo.svg">
   - React Router
   - Redux
   - Styled Components
