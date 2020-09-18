@@ -8,6 +8,8 @@ import muiTheme from '../styles/muiTheme'
 import styledTheme from '../styles/styledTheme'
 
 import Home from './Home'
+import DashboardContainer from './Dashboard'
+import Login from './Login'
 
 const Button = styled.button`
   border-color: ${({ theme }) => theme.success};
@@ -26,6 +28,14 @@ const App = () => {
             <Route path="/about">
               <h1>Hello</h1>
               <Button>Click Me</Button>
+            </Route>
+
+            <Route path="/dashboard">
+              <DashboardContainer />
+            </Route>
+
+            <Route path="/login">
+              <Login />
             </Route>
 
             <Route exact path="/">
