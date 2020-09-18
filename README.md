@@ -4,7 +4,7 @@ Author: Mike McGrath
 ## Tech Stack
 
 ### Client
-  - React.js
+  - [React.js](https://reactjs.org) <img style="width: 40px; height: 40px;" src="https://github.com/mjmcgrath2010/sprague/assets/logos/vendors/react-logo.svg">
   - React Router
   - Redux
   - Styled Components
