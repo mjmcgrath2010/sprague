@@ -1,35 +1,28 @@
-<style>
-img.vendor-logo {
-    height: 40px;
-    width: auto;
-    display: none;
-}
-</style>
-# Sprague - the full stack javascript application boilerplate
-Author: Mike McGrath
+## Sprague - a boilerplate for building full stack javascript applications.
+###### Created with ❤️ by [Mike McGrath](https://github.com/mjmcgrath2010)
 
-## Tech Stack
+### Tech Stack
 
-### Client
-  - [React.js](https://reactjs.org) <img class="vendor-logo" src="https://raw.githubusercontent.com/mjmcgrath2010/sprague/master/assets/logos/vendors/react-logo.svg">
-  - React Router
-  - Redux
-  - Styled Components
-  - Material UI
+#### Client
+  - [React.js](https://reactjs.org)
+  - [React Router](https://reactrouter.com/)
+  - [Redux](https://react-redux.js.org/)
+  - [Styled Components](https://styled-components.com/)
+  - [Material UI](https://material-ui.com/)
   
-### Server
-  - Express
-  - Mongoose.js
+#### Server
+  - [Express](https://expressjs.com/)
+  - [Mongoose.js](https://mongoosejs.com/)
 
-### Services
-  - Passport.js
+#### Services
+  - [Passport.js](http://www.passportjs.org/)
   
-### DevX
-  - Prettier
-  - Nodemon
-  - HMR
+#### DevX
+  - [Prettier](https://prettier.io/)
+  - [Nodemon](https://nodemon.io/)
+  - [Webpack HMR](https://webpack.js.org/concepts/hot-module-replacement/)
   
-## Setup Instructions
+### Setup Instructions
 
   1.  cd into your development directory
   2.  run `git clone https://github.com/mjmcgrath2010/sprague`
@@ -44,6 +37,6 @@ MONGODB_URI=<MONGO_DB_URL>
   5. run `yarn dev`
   6. Happy coding :)
   
-# Deploying to heroku
+### Deploying to heroku
 
 1. TDB
