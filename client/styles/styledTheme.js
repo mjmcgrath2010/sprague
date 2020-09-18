@@ -3,7 +3,7 @@ export default {
   white: '#fff',
   black: '#000',
   // Branding Colors - used with MUI
-  primary: '#1a237e',
+  primary: '#141a5c',
   primaryLight: '#534bae',
   primaryDark: '#000051',
 
