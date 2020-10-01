@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import AuthenticationContext from '../../utils/AuthenticationContent'
+import AuthenticationContext from '../../utils/AuthenticationCotext'
 
 const AuthenticationLayout = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(true)

@@ -4,7 +4,7 @@ import GridContainer from '../../components/ui/layout/GridContainer'
 import NavBar from '../../components/ui/NavBar'
 import Container from '../../components/ui/layout/Container'
 import AuthenticationLayout from './Authenication'
-import AuthenticationContext from '../../utils/AuthenticationContent'
+import AuthenticationContext from '../../utils/AuthenticationCotext'
 
 const DashboardLayout = ({ children }) => {
   return (
