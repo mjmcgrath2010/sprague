@@ -5,7 +5,7 @@ const Home = props => {
   return (
     <HomePage>
       <HomePage.Hero>
-        <h1>Mike</h1>
+        <h1>Hello!</h1>
       </HomePage.Hero>
       <HomePage.Featured>
         <h1>Featured</h1>
