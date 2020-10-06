@@ -12,7 +12,6 @@ COPY . /app
 RUN yarn global add nodemon
 
 EXPOSE 8080
-#EXPOSE 27017
-#EXPOSE 6379
 
-CMD ["yarn", "dev"]
+RUN yarn build
+ENTRYPOINT ["nodemon", "app/server/index.js"]

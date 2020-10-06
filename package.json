@@ -7,7 +7,6 @@
   "main": "server/index.js",
   "scripts": {
     "test": "jest",
-    "dev": "yarn build && nodemon build/server/index.js",
     "build": "webpack --config ./config/webpack/index.js",
     "start": "node build/server/index.js"
   },

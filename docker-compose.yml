@@ -13,6 +13,13 @@ services:
     env_file:
       - ".env"
     container_name: app
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://redis:6379/0
+      - MONGODB_URI=mongodb://mongo_db:27017/demo
+      - NODE_ENV=development
+      - BASE_URL=localhost:3009
+
   redis:
     image: redis
     ports:
